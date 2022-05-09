@@ -9,6 +9,6 @@ import Foundation
 
 struct Conversation : Decodable {
     let id : String
-    let messageIdList : [String]
-    let userIdList : [String]
+    let other_emailId : String
+    let last_message : String
 }

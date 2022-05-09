@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting-->
+        <scene sceneID="te4-dl-pC5">
+            <objects>
+                <viewController id="dfz-Pm-beZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mJx-6r-fx8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="olL-Ww-epy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" image="checkmark.seal.fill" catalog="system" id="7hk-lF-hyp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yf8-TW-q99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60.869565217391312" y="-188.16964285714286"/>
+        </scene>
+        <!--Conversations View Controller-->
+        <scene sceneID="AuM-AA-i7Y">
+            <objects>
+                <viewController storyboardIdentifier="ConversationsViewController" id="aTo-mE-qJN" customClass="ConversationsViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jhW-8O-wtr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Jf-so-lw9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yq0-ki-rHe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yq0-ki-rHe" firstAttribute="trailing" secondItem="7Jf-so-lw9" secondAttribute="trailing" id="EvQ-uH-aj1"/>
+                            <constraint firstItem="Yq0-ki-rHe" firstAttribute="bottom" secondItem="7Jf-so-lw9" secondAttribute="bottom" id="PyU-2H-c1H"/>
+                            <constraint firstItem="7Jf-so-lw9" firstAttribute="leading" secondItem="Yq0-ki-rHe" secondAttribute="leading" id="fMw-ba-yAy"/>
+                            <constraint firstItem="7Jf-so-lw9" firstAttribute="top" secondItem="Yq0-ki-rHe" secondAttribute="top" id="vIg-IH-3AJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ibn-el-5vY"/>
+                    <connections>
+                        <outlet property="tblConversation" destination="7Jf-so-lw9" id="YFK-BJ-MPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSI-66-aap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1133.3333333333335" y="-188.16964285714286"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="8kN-hW-Acn">
+            <objects>
+                <tabBarController storyboardIdentifier="MainViewController" id="xH2-61-b8O" customClass="MainViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z62-cl-7Eg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cDf-i8-1Ns" kind="relationship" relationship="viewControllers" id="l0M-bv-LQM"/>
+                        <segue destination="dfz-Pm-beZ" kind="relationship" relationship="viewControllers" id="7rd-xb-itL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Wj-0h-hay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1548" y="-923"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Chat" id="BYZ-38-t0r" customClass="ChatViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Pi-ai-4HC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="803"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pvW-cd-Puq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uAA-tS-GL8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Pi-ai-4HC" secondAttribute="bottom" constant="15" id="Jfb-Y7-pEH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Pi-ai-4HC" secondAttribute="trailing" id="YDO-at-WmT"/>
+                            <constraint firstItem="6Pi-ai-4HC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kNB-bR-87U"/>
+                            <constraint firstItem="6Pi-ai-4HC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s8j-Dn-QHo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblChat" destination="6Pi-ai-4HC" id="Jpx-EZ-KNp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1190" y="-188"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="znj-Wy-Pcc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cDf-i8-1Ns" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="message.fill" catalog="system" id="DfJ-vN-hxh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KBB-yS-ObO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aTo-mE-qJN" kind="relationship" relationship="rootViewController" id="jHK-Aa-las"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q97-zG-9cQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2043.4782608695655" y="-188.16964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.seal.fill" catalog="system" width="128" height="128"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

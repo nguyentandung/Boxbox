@@ -116,15 +116,15 @@ extension DatabaseManager {
 
 extension DatabaseManager {
     
-    public func addConversation(with conversations:[Conversation]) {
-        let conversationRef = database.collection(CollectionPath.conversation)
-        for conversation in conversations {
-            let data : [String : Any] = ["id":conversation.id,
-                        "messageIdList":conversation.messageIdList,
-                        "userIdList" :conversation.userIdList]
-            conversationRef.document("conv\(conversation.id)").setData(data)
-        }
-    }
+//    public func addConversation(with conversations:[Conversation]) {
+//        let conversationRef = database.collection(CollectionPath.conversation)
+//        for conversation in conversations {
+//            let data : [String : Any] = ["id":conversation.id,
+//                        "messageIdList":conversation.messageIdList,
+//                        "userIdList" :conversation.userIdList]
+//            conversationRef.document("conv\(conversation.id)").setData(data)
+//        }
+//    }
 }
 
 extension DatabaseManager {

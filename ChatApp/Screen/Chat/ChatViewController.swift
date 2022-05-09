@@ -19,6 +19,16 @@ class ChatViewController: UIViewController {
         addMessage()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hiddenNavigationbar()
+    }
+    
+    private func hiddenNavigationbar() {
+//        self.navigationController?.isNavigationBarHidden = true
+//        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     func register() {
         self.tblChat.delegate = self
         self.tblChat.dataSource = self
