@@ -70,6 +70,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func actionLogin(_ sender: Any) {
-        validateData()
+//        validateData()
+        self.loginAccount(with: "dungnt1@gmail.com", with: "Dung4321")
     }
 }

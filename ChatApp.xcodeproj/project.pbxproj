@@ -16,6 +16,12 @@
 		D415886F28192A8D001191E2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415886E28192A8D001191E2 /* Message.swift */; };
 		D415887128192B20001191E2 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415887028192B20001191E2 /* Conversation.swift */; };
 		D415887328192B5E001191E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415887228192B5E001191E2 /* User.swift */; };
+		D438AFCC2828F0E400770344 /* ConversationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438AFCA2828F0E400770344 /* ConversationsTableViewCell.swift */; };
+		D438AFCD2828F0E400770344 /* ConversationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D438AFCB2828F0E400770344 /* ConversationsTableViewCell.xib */; };
+		D438AFCF2828F17F00770344 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438AFCE2828F17F00770344 /* UIView.swift */; };
+		D438AFD12828F18600770344 /* UITextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438AFD02828F18600770344 /* UITextfield.swift */; };
+		D438AFD42828F2BD00770344 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438AFD22828F2BD00770344 /* ConversationsViewController.swift */; };
+		D438AFD82828F3B200770344 /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438AFD72828F3B200770344 /* ConversationsViewModel.swift */; };
 		D4C6A3C62811624500049014 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D4C6A3C52811624500049014 /* Alamofire */; };
 		D4D69F1C2817959800AD1D57 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4D69F0F2817959800AD1D57 /* Roboto-Medium.ttf */; };
 		D4D69F1D2817959800AD1D57 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4D69F102817959800AD1D57 /* Roboto-Light.ttf */; };
@@ -55,6 +61,12 @@
 		D415886E28192A8D001191E2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D415887028192B20001191E2 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		D415887228192B5E001191E2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D438AFCA2828F0E400770344 /* ConversationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsTableViewCell.swift; sourceTree = "<group>"; };
+		D438AFCB2828F0E400770344 /* ConversationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationsTableViewCell.xib; sourceTree = "<group>"; };
+		D438AFCE2828F17F00770344 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D438AFD02828F18600770344 /* UITextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextfield.swift; sourceTree = "<group>"; };
+		D438AFD22828F2BD00770344 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		D438AFD72828F3B200770344 /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 		D4D69F0F2817959800AD1D57 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		D4D69F102817959800AD1D57 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		D4D69F112817959800AD1D57 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -108,6 +120,7 @@
 		D4158867281925B3001191E2 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				D438AFD62828F39700770344 /* Conversations */,
 				D438AFC72828E98000770344 /* Cells */,
 				D4EB6FD1280923B7008B4091 /* ChatViewController.swift */,
 			);
@@ -147,8 +160,43 @@
 			children = (
 				D4EB6FD4280924F4008B4091 /* ChatTableViewCell.xib */,
 				D4EB6FD3280924F4008B4091 /* ChatTableViewCell.swift */,
+				D438AFCA2828F0E400770344 /* ConversationsTableViewCell.swift */,
+				D438AFCB2828F0E400770344 /* ConversationsTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		D438AFC82828F09C00770344 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D4D69F29281797C000AD1D57 /* FontExtension.swift */,
+				D438AFCE2828F17F00770344 /* UIView.swift */,
+				D438AFD02828F18600770344 /* UITextfield.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D438AFC92828F0A700770344 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D4EB6FBD28092231008B4091 /* AppDelegate.swift */,
+				D4EB6FBF28092231008B4091 /* SceneDelegate.swift */,
+				D4EB6FC128092231008B4091 /* ViewController.swift */,
+				D4158868281925F3001191E2 /* MainViewController.swift */,
+				D4EB6FC328092231008B4091 /* Main.storyboard */,
+				D4EB6FC828092232008B4091 /* LaunchScreen.storyboard */,
+				D4EB6FC628092232008B4091 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D438AFD62828F39700770344 /* Conversations */ = {
+			isa = PBXGroup;
+			children = (
+				D438AFD22828F2BD00770344 /* ConversationsViewController.swift */,
+				D438AFD72828F3B200770344 /* ConversationsViewModel.swift */,
+			);
+			path = Conversations;
 			sourceTree = "<group>";
 		};
 		D4D69F0E2817959800AD1D57 /* roboto */ = {
@@ -193,19 +241,13 @@
 		D4EB6FBC28092231008B4091 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				D438AFC92828F0A700770344 /* Resource */,
+				D438AFC82828F09C00770344 /* Extension */,
 				D438AFC62828E93800770344 /* Screen */,
 				D415886D28192A78001191E2 /* Model */,
 				D415886A281928E5001191E2 /* App Manager */,
 				D4D69F0E2817959800AD1D57 /* roboto */,
-				D4EB6FBD28092231008B4091 /* AppDelegate.swift */,
-				D4EB6FBF28092231008B4091 /* SceneDelegate.swift */,
-				D4EB6FC128092231008B4091 /* ViewController.swift */,
-				D4EB6FC328092231008B4091 /* Main.storyboard */,
-				D4EB6FC628092232008B4091 /* Assets.xcassets */,
-				D4EB6FC828092232008B4091 /* LaunchScreen.storyboard */,
 				D4EB6FCB28092232008B4091 /* Info.plist */,
-				D4D69F29281797C000AD1D57 /* FontExtension.swift */,
-				D4158868281925F3001191E2 /* MainViewController.swift */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -309,6 +351,7 @@
 				D4EB6FC728092232008B4091 /* Assets.xcassets in Resources */,
 				D4D69F202817959800AD1D57 /* Apache License.txt in Resources */,
 				D4D69F242817959800AD1D57 /* Roboto-Italic.ttf in Resources */,
+				D438AFCD2828F0E400770344 /* ConversationsTableViewCell.xib in Resources */,
 				D4D69F1F2817959800AD1D57 /* Roboto-MediumItalic.ttf in Resources */,
 				D4D69F262817959800AD1D57 /* Roboto-Bold.ttf in Resources */,
 				D4EB6FC528092231008B4091 /* Main.storyboard in Resources */,
@@ -367,12 +410,17 @@
 				D4158866281916BF001191E2 /* LoginViewController.swift in Sources */,
 				D4D69F2A281797C000AD1D57 /* FontExtension.swift in Sources */,
 				D4EB6FC228092231008B4091 /* ViewController.swift in Sources */,
+				D438AFD12828F18600770344 /* UITextfield.swift in Sources */,
 				D4EB6FBE28092231008B4091 /* AppDelegate.swift in Sources */,
+				D438AFD42828F2BD00770344 /* ConversationsViewController.swift in Sources */,
+				D438AFCC2828F0E400770344 /* ConversationsTableViewCell.swift in Sources */,
 				D4EB6FD5280924F4008B4091 /* ChatTableViewCell.swift in Sources */,
 				D415887128192B20001191E2 /* Conversation.swift in Sources */,
+				D438AFD82828F3B200770344 /* ConversationsViewModel.swift in Sources */,
 				D4EB6FD2280923B7008B4091 /* ChatViewController.swift in Sources */,
 				D4EB6FC028092231008B4091 /* SceneDelegate.swift in Sources */,
 				D415887328192B5E001191E2 /* User.swift in Sources */,
+				D438AFCF2828F17F00770344 /* UIView.swift in Sources */,
 				D4EC831C281A694200C80DC5 /* Department.swift in Sources */,
 				D415886F28192A8D001191E2 /* Message.swift in Sources */,
 				D4158869281925F3001191E2 /* MainViewController.swift in Sources */,

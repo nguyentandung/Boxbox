@@ -47,7 +47,7 @@ extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = conversationTbl.dequeueReusableCell(withIdentifier: "ConversationTableViewCell", for: indexPath) as! ConversationTableViewCell
         cell.idConv.text = convs[indexPath.row].id
-        cell.nameConv.text = convs[indexPath.row].userIdList[0]
+//        cell.nameConv.text = convs[indexPath.row].userIdList[0]
         return cell
     }
     
