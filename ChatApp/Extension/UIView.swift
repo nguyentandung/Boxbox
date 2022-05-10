@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import NVActivityIndicatorView
 
 extension UIView {
     
@@ -56,3 +57,4 @@ extension UIView {
     }
     
 }
+

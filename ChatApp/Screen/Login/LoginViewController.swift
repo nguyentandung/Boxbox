@@ -65,12 +65,11 @@ class LoginViewController: UIViewController {
             }
             //MARK: Show homeScreen when login Success
             self?.showChatScreen()
-            
         })
     }
     
     @IBAction func actionLogin(_ sender: Any) {
 //        validateData()
-        self.loginAccount(with: "dungnt1@gmail.com", with: "Dung4321")
+//        self.loginAccount(with: "dungnt1@gmail.com", with: "Dung4321")
     }
 }
