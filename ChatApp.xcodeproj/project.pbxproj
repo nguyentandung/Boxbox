@@ -22,6 +22,8 @@
 		D438AFD12828F18600770344 /* UITextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438AFD02828F18600770344 /* UITextfield.swift */; };
 		D438AFD42828F2BD00770344 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438AFD22828F2BD00770344 /* ConversationsViewController.swift */; };
 		D438AFD82828F3B200770344 /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438AFD72828F3B200770344 /* ConversationsViewModel.swift */; };
+		D4A8D786282A03F400A770D4 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D4A8D785282A03F400A770D4 /* NVActivityIndicatorView */; };
+		D4A8D788282A03F400A770D4 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = D4A8D787282A03F400A770D4 /* NVActivityIndicatorViewExtended */; };
 		D4C6A3C62811624500049014 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D4C6A3C52811624500049014 /* Alamofire */; };
 		D4D69F1C2817959800AD1D57 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4D69F0F2817959800AD1D57 /* Roboto-Medium.ttf */; };
 		D4D69F1D2817959800AD1D57 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4D69F102817959800AD1D57 /* Roboto-Light.ttf */; };
@@ -101,7 +103,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5B3537CE8A7673423ED995 /* Pods_ChatApp.framework in Frameworks */,
+				D4A8D788282A03F400A770D4 /* NVActivityIndicatorViewExtended in Frameworks */,
 				D4C6A3C62811624500049014 /* Alamofire in Frameworks */,
+				D4A8D786282A03F400A770D4 /* NVActivityIndicatorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,8 @@
 			name = ChatApp;
 			packageProductDependencies = (
 				D4C6A3C52811624500049014 /* Alamofire */,
+				D4A8D785282A03F400A770D4 /* NVActivityIndicatorView */,
+				D4A8D787282A03F400A770D4 /* NVActivityIndicatorViewExtended */,
 			);
 			productName = ChatApp;
 			productReference = D4EB6FBA28092231008B4091 /* ChatApp.app */;
@@ -320,6 +326,7 @@
 			mainGroup = D4EB6FB128092231008B4091;
 			packageReferences = (
 				D4C6A3C42811624500049014 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D4A8D784282A03F400A770D4 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = D4EB6FBB28092231008B4091 /* Products */;
 			projectDirPath = "";
@@ -650,6 +657,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D4A8D784282A03F400A770D4 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D4C6A3C42811624500049014 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -661,6 +676,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D4A8D785282A03F400A770D4 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4A8D784282A03F400A770D4 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		D4A8D787282A03F400A770D4 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4A8D784282A03F400A770D4 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
 		D4C6A3C52811624500049014 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4C6A3C42811624500049014 /* XCRemoteSwiftPackageReference "Alamofire" */;
