@@ -127,7 +127,17 @@ extension DatabaseManager {
 //    }
 }
 
+/// Conversation
 extension DatabaseManager {
+    
+    public func createConversation(idCreator: String, idSecondUser:String) {
+        let idConversation = String(format: "%@_%@", idCreator,idSecondUser)
+        let docRef = database.collection(CollectionPath.conversation)
+        let dataConv : [String:Any] = ["id":idConversation,
+                                   "other_email":idSecondUser,
+                                   "last_message":"You have been a friend"]
+        docRef.document(idConversation).setData(dataConv)
+    }
     
     public func getAllConversation(completion:@escaping ([Conversation]) -> Void){
         var convs = [Conversation]()
@@ -146,7 +156,7 @@ extension DatabaseManager {
                         print(decodedCountries)
                         convs.append(decodedCountries)
                     } catch {
-                        print(error)
+                        print("Some error:\(error)")
                     }
                 }
                 completion(convs)
@@ -154,17 +164,29 @@ extension DatabaseManager {
         }
     }
     
-//    public func startListenChangeConversations(with emailId: String, completion: @escaping ([Conversation]) -> Void) {
-//        var convs = [Conversation]()
-//        database.collection(CollectionPath.conversation).addSnapshotListener{ documentSnapshot, error in
-//            guard let querySnapshot = documentSnapshot?.documents, error != nil else {
-//                print(error as Any)
-//                completion(convs)
-//                return
-//            }
-//            /// if conversations have change
-//
-//        }
-//    }
+    public func startListenChangeConversations(with emailId: String, completion: @escaping ([Conversation]) -> Void) {
+        var convs = [Conversation]()
+        database.collection(CollectionPath.conversation).addSnapshotListener{ (documentSnapshot, error) in
+            if let err = error {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in documentSnapshot!.documents {
+                    let dataDescription = document.data()
+                    print("Document data: \(dataDescription)")
+                    do {
+                        let json = try JSONSerialization.data(withJSONObject: dataDescription)
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let decodedCountries = try decoder.decode(Conversation.self, from: json)
+                        print(decodedCountries)
+                        convs.append(decodedCountries)
+                    } catch {
+                        print("Some error:\(error)")
+                    }
+                }
+                completion(convs)
+            }
+        }
+    }
 }
 

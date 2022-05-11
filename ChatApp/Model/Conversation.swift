@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Conversation : Decodable {
+struct Conversation : Codable {
     let id : String
-    let other_emailId : String
-    let last_message : String
+    let otherEmail : String
+    let lastMessage : String
 }

@@ -31,6 +31,11 @@ class ConversationsViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    
+    @IBAction func actionCreateConversation(_ sender: Any) {
+        viewModel.createConversation(idCreator: "dungnt1@gmail.com", idSecondUser: "dungnt2@gmail.com")
+    }
+    
     private func setupTableview() {
         self.tblConversation.delegate = self
         self.tblConversation.dataSource = self
@@ -75,8 +80,8 @@ extension ConversationsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let conv = conversations[indexPath.row]
         let cell = tblConversation.dequeueReusableCell(withIdentifier: "ConversationsTableViewCell", for: indexPath) as! ConversationsTableViewCell
-        cell.lblGroupName.text = conv.other_emailId
-        cell.lblLastContentMessage.text = !conv.last_message.isEmpty ? conv.last_message : String(format: "You and %@ have been a friend", conv.other_emailId)
+        cell.lblGroupName.text = conv.otherEmail
+        cell.lblLastContentMessage.text = !conv.lastMessage.isEmpty ? conv.lastMessage : String(format: "You and %@ have been a friend", conv.otherEmail)
         return cell
     }
 }

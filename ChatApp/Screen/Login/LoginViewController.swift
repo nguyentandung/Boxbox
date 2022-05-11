@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
             }
             let user = result.user
             print("Created user:\(user)")
-            let userInfo = User(adfsId: "4163vdv", firstname: "Nguyen", lastname: "Dung", group: "BSV21", role: "Admin")
+            let userInfo = User(adfsId: "1673cbqojf", firstname: "Tony", lastname: "Nguyen", group: "BSV24", role: "User")
             DatabaseManager.sharedInstance.createNewUser(with: username, info: userInfo)
             self.loginAccount(with: username, with: password)
         })
@@ -71,5 +71,6 @@ class LoginViewController: UIViewController {
     @IBAction func actionLogin(_ sender: Any) {
 //        validateData()
 //        self.loginAccount(with: "dungnt1@gmail.com", with: "Dung4321")
+        self.loginAccount(with: "dungnt2@gmail.com", with: "Dung4321")
     }
 }
